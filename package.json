@@ -1,7 +1,7 @@
 {
-  "name": "cleanedfortniteapi",
-  "version": "1.0.0",
-  "description": "Simple api for fortnite",
+  "name": "rainbow6api",
+  "version": "1.0.1",
+  "description": "Simple api for Tom Clancy's Rainbow 6 Siege",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
