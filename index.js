@@ -73,6 +73,7 @@ class Rainbow6 {
   async getStats(username, platform, type = "default") {
     let url;
     let uid;
+    let sdata = {};
 
     if (platform === "uplay") {
       url = "https://public-ubiservices.ubi.com/v1/spaces/5172a557-50b5-4665-b7db-e3f2e8c5041d/sandboxes/OSBOR_PC_LNCH_A/playerstats2/statistics";
@@ -89,7 +90,7 @@ class Rainbow6 {
       uid = id;
     });
 
-    axios({
+    await axios({
       method: "get",
       url: `${url}?populations=${uid}&statistics=${stats}`,
       headers: {
@@ -104,8 +105,6 @@ class Rainbow6 {
       let shortkeys = [];
       let index = 0;
       let key = "";
-      let sdata = {};
-      console.log(`\n${type}`);
 
       keys.forEach(function(item, i) {
         shortkeys.push(item.substring(0, item.indexOf(":")));
@@ -127,10 +126,11 @@ class Rainbow6 {
         sdata[item] = data[key];
       });
 
-      return sdata;
     }).catch(function(err) {
       console.log(err);
     });
+
+    return sdata;
   }
 
 }

@@ -1,7 +1,7 @@
 {
   "name": "rainbow6api",
-  "version": "1.0.2",
-  "description": "Simple api for Tom Clancy's Rainbow 6 Siege",
+  "version": "1.0.3",
+  "description": "A simple api for Tom Clancy's Rainbow 6 Siege",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
