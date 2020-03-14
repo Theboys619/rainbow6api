@@ -27,7 +27,7 @@ class Rainbow6 {
 
     axios({
       method: "post",
-      url: "https://uplayconnect.ubi.com/ubiservices/v2/profiles/sessions",
+      url: "https://public-ubiservices.ubi.com/v3/profiles/sessions",
       headers: {
         "authorization": "Basic " + btoa(this.credentials.email+':'+this.credentials.password),
         "ubi-appid": this.ubiappid,
@@ -41,7 +41,7 @@ class Rainbow6 {
       _this.loggedin = true;
       console.log("\nLogged in Successfully");
     }).catch(function(err) {
-      console.log(`\nAxios Error: ${err.response.data.message}`);
+      console.log(`\nAxios Error: ${err}`);
     });
   }
 
